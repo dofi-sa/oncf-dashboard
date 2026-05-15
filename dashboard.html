@@ -1,0 +1,117 @@
+</style>
+</head>
+<body>
+    <div class="dashboard-container">
+
+        <!-- HEADER -->
+        <div class="header">
+            <div class="logo">🚂</div>
+            <h1>ONCF - Tableau de Bord Satisfaction Voyageurs</h1>
+            <p class="subtitle">
+                📅 Période : <strong>{df['Date_voyage'].min().strftime('%d/%m/%Y')}</strong>
+                → <strong>{df['Date_voyage'].max().strftime('%d/%m/%Y')}</strong>
+                &nbsp;|&nbsp; 📊 <strong>{total_responses} réponses</strong> collectées
+            </p>
+        </div>
+
+        <!-- KPIs -->
+        <div class="kpi-grid">
+            <div class="kpi-card">
+                <div class="kpi-icon">⭐</div>
+                <div class="kpi-value">{satisfaction_moy:.2f}<small style="font-size:0.4em;">/5</small></div>
+                <div class="kpi-label">Satisfaction</div>
+                <div class="kpi-subtitle">Note moyenne globale</div>
+            </div>
+
+            <div class="kpi-card">
+                <div class="kpi-icon">👍</div>
+                <div class="kpi-value">{taux_recommandation:.1f}<small style="font-size:0.4em;">%</small></div>
+                <div class="kpi-label">Recommandation</div>
+                <div class="kpi-subtitle">Recommanderaient ONCF</div>
+            </div>
+
+            <div class="kpi-card">
+                <div class="kpi-icon">⏰</div>
+                <div class="kpi-value">{taux_retard:.1f}<small style="font-size:0.4em;">%</small></div>
+                <div class="kpi-label">Retards</div>
+                <div class="kpi-subtitle">Trains signalés en retard</div>
+            </div>
+
+            <div class="kpi-card">
+                <div class="kpi-icon">👥</div>
+                <div class="kpi-value">{total_responses}</div>
+                <div class="kpi-label">Répondants</div>
+                <div class="kpi-subtitle">Total questionnaires</div>
+            </div>
+        </div>
+
+        <!-- RANGÉE 1 : 2 Graphiques -->
+        <div class="graph-grid-2">
+            <div class="graph-card">
+                {graph1_html}
+            </div>
+            <div class="graph-card">
+                {graph2_html}
+            </div>
+        </div>
+
+        <!-- RANGÉE 2 : Radar (pleine largeur) -->
+        <div class="graph-grid-1">
+            <div class="graph-card">
+                {graph3_html}
+            </div>
+        </div>
+
+        <!-- RANGÉE 3 : 2 Graphiques -->
+        <div class="graph-grid-2">
+            <div class="graph-card">
+                {graph5_html}
+            </div>
+            <div class="graph-card">
+                {graph4_html}
+            </div>
+        </div>
+
+        <!-- RANGÉE 4 : Évolution (pleine largeur) -->
+        <div class="graph-grid-1">
+            <div class="graph-card">
+                {graph6_html}
+            </div>
+        </div>
+
+        <!-- TABLEAU RÉCAPITULATIF -->
+        <div class="graph-grid-1">
+            <div class="graph-card">
+                <h2 class="section-title">📊 Récapitulatif Détaillé par Type de Train</h2>
+                <div style="overflow-x: auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="text-align: left; padding-left: 25px;">Type de Train</th>
+                                <th>⭐ Satisfaction</th>
+                                <th>🧹 Propreté</th>
+                                <th>💺 Confort</th>
+                                <th>❄️ Climatisation</th>
+                                <th>⏱️ Respect Temps</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {tableau_rows}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <p><strong>🚂 ONCF - Office National des Chemins de Fer</strong></p>
+            <p>Analyse Satisfaction Voyageurs | Dashboard généré le {datetime.now().strftime('%d/%m/%Y à %H:%M')}</p>
+            <p style="font-size: 0.8em; margin-top: 10px; color: #aaa;">
+                © 2026 ONCF - Tous droits réservés
+            </p>
+        </div>
+
+    </div>
+</body>
+</html>"""
