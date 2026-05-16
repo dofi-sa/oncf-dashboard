@@ -74,7 +74,8 @@ This project delivers a **standalone, interactive HTML dashboard** for ONCF, pro
 ├── assets/
 │ └── screenshots/
 │ ├── dashboard_full.png
-│ ├── kpi_cards.png
+│ ├──
+kpi_cards.png
 │ └── radar_chart.png
 │
 └── ONCF_Dashboard.html
@@ -94,6 +95,13 @@ This project delivers a **standalone, interactive HTML dashboard** for ONCF, pro
 | **Version Control**| Git & GitHub                      |
 
 ---
+### Resultat
+<div>
+   <img width="1350" height="480" alt="Image" src="https://github.com/user-attachments/assets/995a09ec-347e-4bf7-8a81-29a561440ab4" />
+   <img width="1339" height="431" alt="Image" src="https://github.com/user-attachments/assets/bf73be51-4426-421b-8347-13a48daafbf5" />
+   <img width="656" height="449" alt="Image" src="https://github.com/user-attachments/assets/f43ac668-562f-4a29-8a59-086b626ba54b" />
+   <img width="653" height="445" alt="Image" src="https://github.com/user-attachments/assets/6ea0ddee-33d7-4099-97f4-ac06415b5e27" />
+</div>
 
 
 ### Prerequisites
