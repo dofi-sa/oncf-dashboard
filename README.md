@@ -95,7 +95,6 @@ This project delivers a **standalone, interactive HTML dashboard** for ONCF, pro
 
 ---
 
-## 🚀 Getting Started
 
 ### Prerequisites
 
